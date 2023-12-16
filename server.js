@@ -4,11 +4,11 @@ const app = express();
 const dbConfig = require('./db.js');
 const roomsRoute=require('./routes/roomsRoute.js');
 const usersRoute=require('./routes/usersRoute.js');
-const corsOptions = {
-      origin: true,
+app.use(cors({
+      origin: 'https://booking-mangement-frontend.vercel.app/',
       credentials: true,
- };
-app.use(cors(corsOptions));
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    }));
 app.use(express.json());
 app.use('/api/rooms',roomsRoute)
 app.use('/api/users',usersRoute)
