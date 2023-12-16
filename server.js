@@ -5,7 +5,7 @@ const dbConfig = require('./db.js');
 const roomsRoute=require('./routes/roomsRoute.js');
 const usersRoute=require('./routes/usersRoute.js');
 app.use(cors({
-      origin: 'https://booking-mangement-frontend.vercel.app/',
+      origin: 'https://booking-mangement-frontend-e5dogq1ec-ranjeet-kumars-projects.vercel.app/',
       credentials: true,
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     }));
